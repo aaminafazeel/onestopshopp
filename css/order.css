@@ -170,8 +170,9 @@ tfoot td {
 }
 
 .form-group img {
+   display: block;
     max-width: 100px;
-    margin-top: 10px;
+    margin: 10px auto; /* Center horizontally and add top margin */
     border-radius: 5px;
 }
 
