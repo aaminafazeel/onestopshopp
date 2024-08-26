@@ -1,8 +1,14 @@
 document.getElementById('checkout-form').addEventListener('submit', function(event) {
     event.preventDefault();
-    alert('Thank you for your purchase! Your order will be delivered on ' + new Date(new Date().getTime() + 7*24*60*60*1000).toLocaleDateString() + '.');
-});
 
+    // Calculate 1 hour from the current time
+    const oneHourLater = new Date(new Date().getTime() + 1*60*60*1000);
+    
+    // Format the date and time to show both
+    const deliveryTime = oneHourLater.toLocaleString(); // Shows both date and time
+
+    alert('Thank you for your purchase! Your order will be delivered on ' + deliveryTime + '.');
+});
 document.addEventListener('DOMContentLoaded', function() {
     const orderItems = JSON.parse(localStorage.getItem('orderItems'));
 
